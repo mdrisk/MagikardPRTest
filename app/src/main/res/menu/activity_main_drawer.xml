@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="@string/navDrawer1">
+            <menu>
+                <item
+                    android:id="@+id/nav_new_card"
+                    android:icon="@drawable/ic_new_card"
+                    android:title="@string/newCard" />
+                <item
+                    android:id="@+id/nav_new_deck"
+                    android:icon="@drawable/ic_new_deck"
+                    android:title="@string/newDeck" />
+            </menu>
+        </item>
+
+        <item android:title="@string/navDrawer2">
+            <menu>
+                <item
+                    android:id="@+id/nav_pokedex"
+                    android:icon="@drawable/ic_pokedex"
+                    android:title="@string/openPokedex" />
+                <item
+                    android:id="@+id/nav_deck_list"
+                    android:icon="@drawable/ic_deck_list"
+                    android:title="@string/openDecklists" />
+            </menu>
+        </item>
+
+
+    </group>
+
+   <!-- <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item> -->
+
+</menu>

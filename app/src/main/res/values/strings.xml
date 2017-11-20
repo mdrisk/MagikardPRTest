@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Magikard</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="NavDrawerHeader">Magikard</string>
+    <string name="NavDrawerSub">Testing PTCG Decks</string>
+    <string name="greeting">Welcome to Magikard!</string>
+    <string name="newCard">New Card</string>
+    <string name="openPokedex">Pokedex</string>
+    <string name="newDeck">New Deck</string>
+    <string name="openDecklists">Deck Lists</string>
+    <string name="navDrawer1">Create</string>
+    <string name="navDrawer2">View</string>
+    <string name="newCardHeader">New Pokemon Card</string>
+    <string name="newPokemonCardHP">Hit Points</string>
+    <string name="newPokemonCardName">Name</string>
+    <string name="newPokemonCardType">Type</string>
+    <string name="newPokemonCardSubmitButton">Submit</string>
+    <string name="pokedexViewHeader">Pokedex</string>
+</resources>
