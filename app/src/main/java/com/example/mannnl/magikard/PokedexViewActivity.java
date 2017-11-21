@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.io.BufferedReader;
@@ -12,7 +13,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.util.ArrayList;
 
 /**
@@ -26,6 +26,9 @@ public class PokedexViewActivity extends AppCompatActivity {
     ArrayList<PokemonCard> cards = new ArrayList<>();
     private String filename = "pokemonCards.txt";
     private String saveData;
+    Button pokedexViewMode;
+    Button pokedexEditMode;
+    Button pokedexDeleteMode;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,9 @@ public class PokedexViewActivity extends AppCompatActivity {
 
 
         pokedexListView = (ListView) findViewById(R.id.pokedexListView);
+        pokedexViewMode = (Button) findViewById(R.id.pokedexViewButton);
+        pokedexEditMode = (Button) findViewById(R.id.pokedexEditButton);
+        pokedexDeleteMode = (Button) findViewById(R.id.pokedexDeleteButton);
 
 
         File file = getBaseContext().getFileStreamPath(filename);
@@ -48,12 +54,6 @@ public class PokedexViewActivity extends AppCompatActivity {
 
 
         loadFromFile(filename, getApplicationContext());
-
-
-        cards.add( new PokemonCard("Turtwig","50","Grass"));
-        cards.add( new PokemonCard("Piplup","60","Water"));
-        cards.add( new PokemonCard("Shinx","70","Lightning"));
-
 
         Intent in = this.getIntent();
         String name = in.getStringExtra("name");
@@ -77,7 +77,7 @@ public class PokedexViewActivity extends AppCompatActivity {
 
         writeToFile(saveData, getApplicationContext());
         loadFromFile(filename, getApplicationContext());
-        
+
         PokedexAdapter pokedexAdapter = new PokedexAdapter(this, R.layout.item_pokemon_card, cards);
 
         pokedexListView.setAdapter(pokedexAdapter);
@@ -89,7 +89,7 @@ public class PokedexViewActivity extends AppCompatActivity {
 
         try {
             outputStream = ctx.openFileOutput(filename, Context.MODE_PRIVATE);
-            //OutputStream.write(text.getBytes());
+            outputStream.write(text.getBytes());
             outputStream.close();
             Log.i("save", "Saved Data");
         } catch (Exception e) {

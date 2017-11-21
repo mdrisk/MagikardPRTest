@@ -30,6 +30,41 @@
         android:layout_height="5dp"
         android:background="#C0C0C0"/>
 
-    <!-- TODO: Buttons for adding cards to decks -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/pokedexViewButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pokedexViewButton"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/pokedexEditButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pokedexEditButton"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/pokedexDeleteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pokedexDeleteButton"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 
 </LinearLayout>

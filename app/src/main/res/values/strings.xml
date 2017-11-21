@@ -20,4 +20,7 @@
     <string name="newPokemonCardType">Type</string>
     <string name="newPokemonCardSubmitButton">Submit</string>
     <string name="pokedexViewHeader">Pokedex</string>
+    <string name="pokedexViewButton">View</string>
+    <string name="pokedexEditButton">Edit</string>
+    <string name="pokedexDeleteButton">Delete</string>
 </resources>
